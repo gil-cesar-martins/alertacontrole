@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="home">
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="home col-lg-6 col-md-12  col-sm-6 p-1 pt-4 m-auto">
+                    <img class="img-fluid" src="{% static 'img/logoalerta.png' %}" alt="logodesa">
+                    <h2>Seja Bem-Vindo(a)</h2>
+                    <p>A ALERTA PRESTAÇÃO DE SERVIÇOS conta com esse app para monitorar a entrada e saída de pedestres e veículos!</p>                       
+                    <p>
+                        Com poucos clicks garantiremos eficiência para nossos colaboradores e mais segurança para todos os clientes!
+                    </p>   
+                    <p>
+                        Caso esteja cadastrado no sistema é só seguir em frente.
+                    </p>  
+                    <a href="/painel/" class="btn btn-dark mt-4">Acessar</a>           
+                </div>  
+            </div>  
+        </div>
+        
+    </section>
+
+{% endblock %}

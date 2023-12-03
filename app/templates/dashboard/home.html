@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h1>ÁREA RESTRITA</h1>
+        Bem-vindo(a) <br>
+
+        <section id="cadastro">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <h1 class="section-title">ALERTA SERVIÇOS</h1>
+                        <h2>Cadastro do Usuário</h2>
+                    </div>
+                </div>
+           
+    
+                <form name="form-users" id="formUsers" method="post" action="/store/">
+                    <div class="col-6 mt-4 m-auto">
+                        {% if msg %}
+                            <div class="alert {{class}}">
+                                {{msg}}
+                            </div>
+                        {% endif %}
+    
+                        {% csrf_token %}
+                        <input class="form-control mt-4" type="text" name="name" id="name" placeholder="Nome:">
+                        <input class="form-control mt-4" type="text" name="user" id="user" placeholder="Registro do Usuário:">
+                        <input class="form-control mt-4" type="password" name="password" id="password" placeholder="Senha:">
+                        <input class="form-control mt-4" type="password" name="password-conf" id="password-conf" placeholder="Repita a Senha:">
+                        <input class="form-control mt-4" type="email" name="email" id="email" placeholder="Email:">
+                        <input class="btn btn-primary mt-4" type="submit" value="Cadastrar">
+                        <a href="/logouts/" class="btn btn-danger mt-4">Sair</a>
+                    </div>
+                </form>
+            </div>    
+        </section>  
+    {% else %}
+        Você não tem acesso a essa área
+    {% endif %}
+{% endblock %}

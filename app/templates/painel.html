@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="painel">
+
+        <div class="container-fluid" data-aos="fade-up">
+            <div class="row">
+                <div class="col-6 p-1 pt-4 m-auto">
+                    <img class="img-fluid" src="{% static 'img/logoalerta.png' %}" alt="logoalerta">
+                </div>
+                
+            </div>
+
+            <p class="col-md-6 pt-2 px-3  text-white m-md-auto">Nossas equipes estarão dispostas conforme os seguintes horários:</p>
+                <div class="col-md-6 pt-2 px-3 text-white m-md-auto">
+                    <li>diurno1 = 06:00 as 18:00</li>
+                    <li>diurno2 = 06:00 as 18:00</li>
+                    <li>noturno1 = 18:00 as 06:00</li>
+                    <li>noturno2 = 18:00 as 06:00</li>
+                </div>
+
+            <form name="formPainel" id="formPainel" method="post" action="/dologin/">
+                <div class="col-6 p-1 pt-4 m-auto">
+                    {% if msg %}
+                        <div class="alert {{class}}">
+                            {{msg}}
+                        </div>
+                    {% endif %}
+    
+                    {% csrf_token %}
+                    <input class="form-control mt-4" autocomplete="off" type="text" name="user" id="user" placeholder="Registro do Usuário:">
+                    <input class="form-control mt-4" autocomplete="off" type="password" name="password" id="password" placeholder="Senha:">
+                    <input class="btn btn-success mt-4" type="submit" value="Entrar">
+                </div>
+            </form>
+        </div>    
+        
+        
+    </section> 
+{% endblock %}

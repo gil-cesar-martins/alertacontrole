@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static  %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<section id="registros">
+    <div class="hero-image">
+        <div class="container col-md-6 p-5 bg-dark text-white">
+            <h1>Controle de Veículos </h1>
+            <p>ACESSE A ÁREA ADMINISTRATIVA</p>
+
+            <div class="row">
+                <a href="/admin/" class="btn btn-secondary mt-3">Registrar</a>
+            </div> 
+
+            <div class="row">
+                <a href="/logouts/" class="btn btn-danger mt-3">Sair</a>
+            </div>      
+        </div>
+    </div>
+</section>  
+{% else %}
+Você não tem acesso a essa área
+{% endif %}
+{% endblock %}

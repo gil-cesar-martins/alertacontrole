@@ -1,0 +1,143 @@
+p {
+  padding: 0;
+  margin: 0 0 10px 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+  .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0 2px;
+}
+.btn-dark-blue {
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border: 3px solid rgb(2, 16, 39);
+}
+/* Cadastro Section
+------------------------*/
+#cadastro {
+   padding: 40px 0 40px 0;
+}
+
+#cadastro .section-title{
+    color: chartreuse;
+    font-size: 32px;
+}
+
+#cadastro h2{
+    color: #000;
+}
+
+/* Painel Section
+------------------------*/
+#painel {
+  height: 100vh;
+  padding: 40px 0 40px 0;
+  background: linear-gradient(to bottom, #c2b501, #7e7817, #0f0e00);
+}
+
+#painel h1 {
+   text-shadow: 2px 2px 8px #202e5e;
+ }
+#painel h2{
+   color: #000;
+}
+#formPainel{
+  height: max-content;
+}
+
+/* Home Section
+------------------------*/
+#home {
+  background: linear-gradient(to bottom,  #c2b501, #7e7817, #0f0e00);
+  height: 100vh;
+  padding: 40px 0 40px 0;
+}
+
+#home p{
+  color: #fff;
+  text-shadow: 2px 2px 8px #202e5e, 2px 2px 5px #000;
+}
+#home ul{
+  color: #fff;
+  text-shadow:2px 2px 8px #202e5e, 2px 2px 8px #000000;
+}
+
+#home h2{
+   margin-top: 40px;
+   color: #fff;
+   text-shadow: 0 0 3px #202e5e, 2px 2px 8px #000;
+}
+@media (max-width: 575px) {
+  #home {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-height: 600px) {
+  #home {
+    height: max-content;
+  }
+}
+
+/* registros Section
+------------------------*/
+#registros .hero-image {
+  background: linear-gradient(to bottom,  #c2b501, #7e7817, #0f0e00);
+  background-color: #000;
+  height:100vh;
+  padding-top: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#registros h1{
+  font-size: 28px;
+  text-align: center;
+}
+
+#registros h1{
+  font-size: 18px;
+  text-align: center;
+}
+
+#registros p{
+  text-align: center;
+}
+
+/*Slides Section
+------------------------*/
+#slides .hero-image {
+  background-color: #000;
+  height:100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#slides h1{
+  font-size: 28px;
+  text-align: center;
+}
+
+#slides p{
+  margin-top: 80px;
+  text-align: center;
+}
+
+#slides a.btn.btn-danger{
+  justify-content: center;
+}

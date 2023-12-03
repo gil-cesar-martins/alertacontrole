@@ -21,6 +21,7 @@
                 </div>
 
             <form name="formPainel" id="formPainel" method="post" action="/dologin/">
+                {% csrf_token %}
                 <div class="col-6 p-1 pt-4 m-auto">
                     {% if msg %}
                         <div class="alert {{class}}">
@@ -28,7 +29,7 @@
                         </div>
                     {% endif %}
     
-                    {% csrf_token %}
+                    
                     <input class="form-control mt-4" autocomplete="off" type="text" name="user" id="user" placeholder="Registro do Usuário:">
                     <input class="form-control mt-4" autocomplete="off" type="password" name="password" id="password" placeholder="Senha:">
                     <input class="btn btn-success mt-4" type="submit" value="Entrar">
